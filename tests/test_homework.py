@@ -5,7 +5,7 @@ def load_data():
 
     import pandas as pd
 
-    dataset = pd.read_csv("../files/input/heart_disease.csv")
+    dataset = pd.read_csv("/files/input/heart_disease.csv")
     y = dataset.pop("target")
     x = dataset.copy()
     x["thal"] = x["thal"].map(
@@ -29,7 +29,6 @@ def load_estimator():
 
 
 def test_01():
-
     from sklearn.metrics import accuracy_score
 
     x, y = load_data()
